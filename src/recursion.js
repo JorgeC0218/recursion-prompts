@@ -61,7 +61,12 @@ var isEven = function(n) {
 // Input = number
 // Output = numbers below input added together
 var sumBelow = function(n){
-
+  if(n < 0){
+    return true;
+  } else if(n > 0){
+    return false;
+  }
+  return n * (sumBelow - n);
   // if n is array add all integers in given array
     // return sum of array
   // if input integer is below 0 add 1 to n
