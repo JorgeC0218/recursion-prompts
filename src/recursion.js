@@ -61,17 +61,18 @@ var isEven = function(n) {
 // Input = number
 // Output = numbers below input added together
 var sumBelow = function(n){
-  if(n < 0){
-    return true;
+  if(n === 0){
+    return 0;
   } else if(n > 0){
-    return false;
+    return ((n - 1) + sumBelow(n - 1));
+  } else if(n < 0){
+    return ((n + 1) + sumBelow(n + 1));
   }
-  return n * (sumBelow - n);
-  // if n is array add all integers in given array
-    // return sum of array
-  // if input integer is below 0 add 1 to n
-  // if input integer above 0 reduce 1 to n
-  // callback function and reduce n's value by 1
+  // if n is less than 0
+    // return sum of integers below given integers
+  // else if n is greater than 0
+    // return sum of integers below given integers
+  //
 };
 
 // 6. Get the integers within a range (x, y).
