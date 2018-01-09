@@ -77,7 +77,23 @@ var sumBelow = function(n){
 
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
+// I = two numbers
+// O = Array of numbers between given inputs
 var range = function(x, y) {
+  var arr = [];
+  if(x === y || (x - 1) === y || (x + 1) === y){
+    return arr;
+  } else if(x < y){
+    arr.push(x + 1);
+    return arr.concat(range(x + 1, y));
+  } else if (x > y){
+    arr.push(x - 1);
+    return arr.concat(range(x - 1, y))
+  }
+  // define empty array
+  // if x and y are the same or no integer betwee them return empty array
+  // else if x is negative subtract 1
+  // if x is larger than y subtract x by 1
 };
 
 // 7. Compute the exponent of a number.
