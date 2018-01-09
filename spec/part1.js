@@ -382,7 +382,7 @@
         expect(originalExponent.toString()).to.not.contain('Math');
       });
 
-      it('should compute exponent of non-negative integers', function() {
+      it('should compute exponent of positive integers', function() {
         expect(exponent(3,4)).to.equal(81);
         expect(exponent(12,5)).to.equal(248832);
         expect(exponent(7,2)).to.equal(49);
